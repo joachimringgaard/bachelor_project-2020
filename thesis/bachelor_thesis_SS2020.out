@@ -1,0 +1,46 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Presentation}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Introduction}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Problem Formulation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Clarification of concepts}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Theory \046 Concepts}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Pictures}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Red-Green-Blue \(RGB\)}{subsection.3.1}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Deep Learning}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Architecture of CNN}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Depth and width}{subsection.3.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Training- and Validation Set Error}{subsection.3.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Layers}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Weights}{subsection.3.4}% 14
+\BOOKMARK [2][-]{subsection.3.5}{Tensors}{section.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Kernel Convolutions}{subsection.3.5}% 16
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Pooling layer}{subsection.3.5}% 17
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Rectified Linear Unit}{subsection.3.5}% 18
+\BOOKMARK [3][-]{subsubsection.3.5.4}{Hidden Layers}{subsection.3.5}% 19
+\BOOKMARK [3][-]{subsubsection.3.5.5}{Softmax Output Layer}{subsection.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.6}{Optimization and Regularization}{section.3}% 21
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Stochastic Gradient Descent or RMSProp}{subsection.3.6}% 22
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Back-Propagation in Fully Connected Multi-Layer Perceptron}{subsection.3.6}% 23
+\BOOKMARK [3][-]{subsubsection.3.6.3}{L2 Parameter Regularization}{subsection.3.6}% 24
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Dataset Augmentation}{subsection.3.6}% 25
+\BOOKMARK [3][-]{subsubsection.3.6.5}{Early stopping}{subsection.3.6}% 26
+\BOOKMARK [3][-]{subsubsection.3.6.6}{Pretraining and parameter sharing}{subsection.3.6}% 27
+\BOOKMARK [3][-]{subsubsection.3.6.7}{Parameter Sharing between Model Architectures}{subsection.3.6}% 28
+\BOOKMARK [1][-]{section.4}{Method}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{Empirical Gathering}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.2}{GPU training}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.3}{Tools and packages}{section.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.3.1}{TensorFlow and Keras}{subsection.4.3}% 33
+\BOOKMARK [3][-]{subsubsection.4.3.2}{PyTorch}{subsection.4.3}% 34
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Theanos}{subsection.4.3}% 35
+\BOOKMARK [1][-]{section.5}{Analysis}{}% 36
+\BOOKMARK [2][-]{subsection.5.1}{Different architectures}{section.5}% 37
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Theory Behind Architecture Choices}{subsection.5.1}% 38
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Manual for architectures}{subsection.5.1}% 39
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 40
+\BOOKMARK [2][-]{subsection.6.1}{Adversarial Training and correction from Adversarial Attacks}{section.6}% 41
+\BOOKMARK [2][-]{subsection.6.2}{Comparison between architectures}{section.6}% 42
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 43
+\BOOKMARK [1][-]{section.8}{Bibliography}{}% 44
+\BOOKMARK [1][-]{section.9}{hallooo}{}% 45
+\BOOKMARK [1][-]{section.10}{Appendix}{}% 46

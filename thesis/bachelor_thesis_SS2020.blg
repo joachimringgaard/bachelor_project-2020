@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: bachelor_thesis_SS2020.aux
+The style file: plain.bst
+Database file #1: bachelor_thesis_references.bib.bib
+Warning--empty publisher in Geron2017
+Warning--empty publisher in Gulli
+Warning--empty year in Gulli
+Warning--can't use both volume and number fields in Khan2018
+Warning--empty publisher in Khan2018
+Warning--empty journal in Norton2017
+Warning--empty publisher in Sutton2018
+You've used 11 entries,
+            2118 wiz_defined-function locations,
+            563 strings with 6101 characters,
+and the built_in function-call counts, 3311 in all, are:
+= -- 303
+> -- 164
+< -- 3
++ -- 65
+- -- 54
+* -- 218
+:= -- 568
+add.period$ -- 32
+call.type$ -- 11
+change.case$ -- 54
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 136
+empty$ -- 259
+format.name$ -- 54
+if$ -- 676
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 17
+newline$ -- 57
+num.names$ -- 22
+pop$ -- 86
+preamble$ -- 1
+purify$ -- 49
+quote$ -- 0
+skip$ -- 85
+stack$ -- 0
+substring$ -- 149
+swap$ -- 22
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 32
+warning$ -- 7
+while$ -- 32
+width$ -- 13
+write$ -- 110
+(There were 7 warnings)

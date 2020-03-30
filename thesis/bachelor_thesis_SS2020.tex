@@ -1,0 +1,199 @@
+\documentclass[a4paper,11pt]{article}
+
+%Semantics packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+
+%Graphic packages
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{a4wide}
+\usepackage{relsize}
+%\usepackage[left=2.5cm,top=2cm,bottom=2.0cm,right=2.5cm]{geometry}%, showframe]{geometry}
+%\usepackage[showframe]{geometry}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{forest}
+\usepackage{tabularx}
+%Ease-of-use packages
+\usepackage{fixme}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+\usepackage{float}
+\usepackage{tabu}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\today}
+\lhead{kwh131}
+\chead{Bachelor Thesis, Computer Science}
+\rfoot{Page \thepage}
+
+%Math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{relsize}
+
+\title{Image Classification with Convolutional Neural Networks}
+\author{kwh131}
+\date{\today}
+
+\begin{document}
+	
+\maketitle
+
+\section{Abstract}
+bla bla bla
+
+\tableofcontents
+
+\newpage
+
+\section{Presentation}
+bla
+\subsection{Introduction}
+\begin{itemize}
+	\item \textit{'The first successful practical application of neural nets came in 1989 from Bell
+	Labs, when Yann LeCun combined the earlier ideas of convolutional neural networks
+	and backpropagation, and applied them to the problem of classifying handwritten
+	digits. The resulting network, dubbed LeNet, was used by the United States Postal Ser-
+	vice in the 1990s to automate the reading of ZIP codes on mail envelopes'} \cite{Chollet-et-al-2018} p. 15.
+	\item \textit{'The
+		ImageNet challenge was notoriously difficult at the time, consisting of classifying high-
+		resolution color images into 1,000 different categories after training on 1.4 million
+		images. In 2011, the top-five accuracy of the winning model, based on classical
+		approaches to computer vision, was only 74.3\%. Then, in 2012, a team led by Alex
+		Krizhevsky and advised by Geoffrey Hinton was able to achieve a top-five accuracy of
+		83.6\%—a significant breakthrough. The competition has been dominated by deep
+		convolutional neural networks every year since. By 2015, the winner reached an accu-
+		racy of 96.4\%, and the classification task on ImageNet was considered to be a com-
+		pletely solved problem.' \cite{Chollet-et-al-2018} p. 17}
+\end{itemize}
+\subsection{Problem Formulation}
+bla
+\subsection{Clarification of concepts}
+bla
+
+\section{Theory \& Concepts}
+\subsection{Pictures}
+\subsubsection{Red-Green-Blue (RGB)}
+blabla
+\subsection{Deep Learning}
+\begin{itemize}
+	\item \textit{'What is transforma-
+	tive about deep learning is that it allows a model to learn all layers of representation
+	jointly, at the same time, rather than in succession (greedily, as it’s called). With joint
+	feature learning, whenever the model adjusts one of its internal features, all other fea-
+	tures that depend on it automatically adapt to the change, without requiring human
+	intervention. Everything is supervised by a single feedback signal: every change in the
+	model serves the end goal.'} \cite{Chollet-et-al-2018} p. 18
+\end{itemize}
+\subsection{Architecture of CNN}
+bla
+\subsubsection{Depth and width}
+\subsubsection{Training- and Validation Set Error}
+bla
+\subsection{Layers}
+\subsubsection{Weights}
+\textit{"The	transformation implemented by a layer is parameterized by its weights"} - weights are called the parameters of the layer. Learning in a deep network is adjusting the weights in each layer, such that they will map the given input to the correct target value \cite{Chollet-et-al-2018} p. 10.
+\subsection{Tensors}
+Convolutional Neural Networks operate on \textit{tensors}. Tensors are $n$-dimensional, often 3-dimensional matrices, that is they have a \textit{height}, a \textit{width}, and a \textit{depth} axis. The dimension of the tensor is called its rank. In the field of image recognition, the height and width dimensions represents the pixel structure of the given images, while the the depth dimension represents the \textit{channels} on which we operate, e.g. RGB-channels (red, green, and blue color intensity in a given image) which gives 3 channels initially. So if we have a small picture, say 32$\times$32 pixels with 3 channels for RGB, then the input tensor would have have dimensions $32\times32\times3=3072$ input values.\\ \\
+\textit{'tensors are a generalization of matrices to an arbitrary number of dimensions
+	(note that in the context of tensors, a dimension is often called an axis)'}. The dimensionality of a tensor is called its \textit{rank}. \cite{Chollet-et-al-2018} p. 31. 
+\subsubsection{Kernel Convolutions}
+Convolutions work on 
+Have different properties:
+\begin{enumerate}
+	\item \textit{Sparce interactions} : Because the kernel is smaller then the input image only a subset of pixels around the pixel in question is interacted with when applying the kernel. This means that we need to store fewer parameters (less memory and more statistical efficiency). As we traverse the networks layers upwards, we get fewer and fewer parameters, but each parameter has more information about the original pixels then in the lower levels. The receptive field for higher layers is increasing.  
+	\item \textit{Parameter sharing} : When applying kernel convolutions, each member of the kernel is visited for every pixel in the input image (except boundaries depending on choice of design). That is we only try to learn one set of parameters for each location in the input image. Reducing the storage requirements and it does not affect the runtime of forward propagation.
+	\item \textit{Equivariance} : This means that we can apply the convolution to the input image then shifting the kernel or the other way around and we would get the same result. This means that convolution produces a timeline that shows when different features appear in the input.
+\end{enumerate}\cite{Goodfellow-et-al-2016}
+Convolutions operate over 3D tensors called \textit{feature maps}, with two spatial axis (\textit{height} and \textit{width}) as well as a \textit{depth axis} (also called the \textit{channels} axis).\cite{Chollet-et-al-2018}
+\subsubsection{Pooling layer}
+Pooling layers help to make the representation approximately invariant to small changes to the input. That is, if we change the input by a small amount we do not get changes in most of the output. Practically you take a subgrid in your feature map and apply the pooling operation to the given grid. The operation could be returning the maximum, taking a weighted average, finding the $L^2$-norm of the grid etc. Pooling is needed when we need to handle images of the same size, but the training data has images of varying sizes.\\
+One convolution extracts one kind of features at specified locations in the input image. We want to extract many features in the entire input image, why oftenly different set of convolutions is applied to the input image in the same layer of the network. The generates more channels (wider layers). \cite{Goodfellow-et-al-2016}
+\subsubsection{Rectified Linear Unit}
+\textbf{ReLU} - Activation functions, such as the sigmoidal function that outputs values between -1 and 1. Harder to train with gradient descent based learning than the ReLU function, $g(\textbf{z})=max(0,\textbf{z})$.
+bla
+\subsubsection{Hidden Layers}
+bla
+\subsubsection{Softmax Output Layer}
+bla
+\subsection{Optimization and Regularization}
+\subsubsection{Stochastic Gradient Descent or RMSProp}
+Minibatch SDG, where you take a batch of training examples to train the model to take bigger and more inaccurate steps towards a (hopefully) global minimum, but converge faster to that minimum than if you had to compute the gradient for each training example. If convergence is not achieved a possible solution is to use optimization algorithm RMSProp that stores at exponentially decreasing average of previous gradient values to start with large steps and end with smaller, hopefully ending in a convex "bowl" to find local (possible global) minimum.
+\begin{itemize}
+\item \textit{Loss function/objective function}: takes the predictions of the network and the true target and computes a distance score capturing how well the network has done on this specific example. Use the score as a feedback signal to adjust the values of the weights through the network to optimize it \cite{Chollet-et-al-2018} p. 10-11.
+\end{itemize}
+\subsubsection{Back-Propagation in Fully Connected Multi-Layer Perceptron}
+Explore dynamic programming with back-propagation to avoid computationally costly algorithms. And it takes up less space. On page 214 in Deep Learning by Goodfellow et al. Talk about chain rule for functions and how it is applied to attain the gradient of different parameters with respect to the loss function. 
+\subsubsection{$\textbf{\textit{L}}^2$ Parameter Regularization}
+$L^2$ parameter regularization: commonly known as wight decay. Add a regularization term, $\Omega(\theta)=1/2||w||_2^2$. 
+\subsubsection{Dataset Augmentation}
+Transform training data to generate more "fake" but relevant data for the CNN. Cropping, resizing, flipping around $x$-axis or $y$-axis, stretching, rotating etc. on the pictures can help generate augmented data to train the model. 
+\subsubsection{Early stopping}
+Keeping track of the validation set error and keeping track of the hyperparameters at each epoch, such that we return the hyper parameters for the model at the point in time where the validation error was the smallest. Reduces overfitting to training data. 
+\subsubsection{Pretraining and parameter sharing}
+\subsubsection{Parameter Sharing between Model Architectures}
+bla
+\section{Method}
+\subsection{Empirical Gathering}
+Finding, reading and listing scientific articles, text books, assignment etc. for use in my Bachelor Thesis 
+
+\subsection{GPU training}
+\begin{itemize}
+	\item[-] CUDA - NVIDIA launched 
+\end{itemize}
+\subsection{Tools and packages}
+\subsubsection{TensorFlow and Keras}
+\subsubsection{PyTorch}
+\subsubsection{Theanos}
+\begin{itemize}
+	\item[-] PyTorch
+	\item[-] TensorFlow
+	\item[-] Keras
+	\item[-] Googles 'Collaboration'
+\end{itemize}
+\section{Analysis}
+bla
+\subsection{Different architectures}
+bla
+\subsubsection{Theory Behind Architecture Choices}
+bla
+\subsubsection{Manual for architectures}
+bla
+\section{Discussion}
+bla
+\subsection{Adversarial Training and correction from Adversarial Attacks}
+bla
+\subsection{Comparison between architectures}
+bla
+\section{Conclusion}
+bla
+\section{Bibliography}
+\bibliographystyle{plain}
+\bibliography{bachelor_thesis_references.bib}
+\section{hallooo}
+
+\section{Appendix}
+bla
+\end{document}
