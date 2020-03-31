@@ -141,6 +141,8 @@ bla
 \subsection{Optimization and Regularization}
 \subsubsection{Stochastic Gradient Descent or RMSProp}
 Minibatch SDG, where you take a batch of training examples to train the model to take bigger and more inaccurate steps towards a (hopefully) global minimum, but converge faster to that minimum than if you had to compute the gradient for each training example. If convergence is not achieved a possible solution is to use optimization algorithm RMSProp that stores at exponentially decreasing average of previous gradient values to start with large steps and end with smaller, hopefully ending in a convex "bowl" to find local (possible global) minimum.
+
+\textit{Momentum Stochastic Gradient Descent} (MSDG) \cite{Loizou2017}
 \begin{itemize}
 \item \textit{Loss function/objective function}: takes the predictions of the network and the true target and computes a distance score capturing how well the network has done on this specific example. Use the score as a feedback signal to adjust the values of the weights through the network to optimize it \cite{Chollet-et-al-2018} p. 10-11.
 \end{itemize}
@@ -155,6 +157,15 @@ Keeping track of the validation set error and keeping track of the hyperparamete
 \subsubsection{Pretraining and parameter sharing}
 \subsubsection{Parameter Sharing between Model Architectures}
 bla
+\subsection{Recipe for CNN in Image Classification}
+\begin{enumerate}
+	\item Find image database
+	\item Download images and associated labels
+	\item Merge images with their given labels
+	\item Split downloaded images into training, validation, and test set.
+	\item If the training set is not large enough, do transformations to enlarge the training set: \textit{cropping}, \textit{flipping}, \textit{rotating} etc.
+	\item 
+\end{enumerate}
 \section{Method}
 \subsection{Empirical Gathering}
 Finding, reading and listing scientific articles, text books, assignment etc. for use in my Bachelor Thesis 

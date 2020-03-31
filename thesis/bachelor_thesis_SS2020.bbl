@@ -1,15 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{Akhtar2018}
-Naveed Akhtar and Ajmal Mian.
-\newblock {Threat of Adversarial Attacks on Deep Learning in Computer Vision: A
-  Survey}.
-\newblock {\em IEEE Access}, 6(August):14410--14430, 2018.
-
-\bibitem{Bottou2018}
-L{\'{e}}on Bottou.
-\newblock {Online Learning and Stochastic Approximations (revised 5/2018)}.
-\newblock {\em Online Learning in Neural Networks}, pages 1--35, 2018.
+\begin{thebibliography}{1}
 
 \bibitem{Chollet-et-al-2018}
 Francois Chollet.
@@ -19,44 +8,12 @@ Francois Chollet.
 \bibitem{Goodfellow-et-al-2016}
 Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 \newblock {\em {Deep Learning}}.
-\newblock MIT Press, 2016.
+\newblock MIT Press, New York, 2nd edition, 2016.
 
-\bibitem{Goodfellow2014}
-Ian~J. Goodfellow, Yaroslav Bulatov, Julian Ibarz, Sacha Arnoud, and Vinay
-  Shet.
-\newblock {Multi-digit number recognition from street view imagery using deep
-  convolutional neural networks}.
-\newblock {\em 2nd International Conference on Learning Representations, ICLR
-  2014 - Conference Track Proceedings}, pages 1--13, 2014.
-
-\bibitem{Gulli}
-Antonio Gulli.
-\newblock {\em {TensorFlow 1.x deep learning cookbook : over 90 unique recipes
-  to solve artificial-intelligence driven problems with Python}}.
-
-\bibitem{Khan2018}
-Salman Khan, Hossein Rahmani, Syed Afaq~Ali Shah, and Mohammed Bennamoun.
-\newblock {\em {A Guide to Convolutional Neural Networks for Computer Vision}},
-  volume~8.
-\newblock 2018.
-
-\bibitem{Norton2017}
-Andrew Norton and Yanjun Qi.
-\newblock {Adversarial-Playground: A Visualization Suite for Adversarial Sample
-  Generation}.
+\bibitem{Loizou2017}
+Nicolas Loizou and Peter Richt{\'{a}}rik.
+\newblock {Momentum and Stochastic Momentum for Stochastic Gradient, Newton,
+  Proximal Point and Subspace Descent Methods}.
 \newblock 2017.
-
-\bibitem{Ponti2017}
-Moacir~Antonelli Ponti, Leonardo Sampaio~Ferraz Ribeiro, Tiago~Santana Nazare,
-  Tu~Bui, and John Collomosse.
-\newblock {Everything You Wanted to Know about Deep Learning for Computer
-  Vision but Were Afraid to Ask}.
-\newblock {\em Proceedings - 2017 30th SIBGRAPI Conference on Graphics,
-  Patterns and Images Tutorials SIBGRAPI-T 2017}, 2018-January:17--41, 2017.
-
-\bibitem{Sutton2018}
-Richard~S. Sutton and Andrew~G. Barto.
-\newblock {\em {Reinforcement Leaning}}.
-\newblock 2018.
 
 \end{thebibliography}
